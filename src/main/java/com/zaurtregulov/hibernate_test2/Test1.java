@@ -16,14 +16,34 @@ public class Test1 {
                 .buildSessionFactory();
         Session session = null;
         try {
-              session = factory.getCurrentSession();
+            session = factory.getCurrentSession();
 
-            Employee employee = new Employee("Zaur", "Tregulov", "IT", 500);
-            Detail detail = new Detail("Baku", "123456789", "zaurtregulov@gmail.com");
-            employee.setEmpDetail(detail);
+//            Employee employee = new Employee("Zaur", "Tregulov", "IT", 500);
+//            Detail detail = new Detail("Baku", "123456789", "zaurtregulov@gmail.com");
+//            employee.setEmpDetail(detail);
+//            session.beginTransaction();
+//            session.save(employee);
+
+//
+//            session.getTransaction().commit();
+//            System.out.println("Done!");
+
+//            Employee employee = new Employee("Oleg", "Smirnov", "Sales", 700);
+//            Detail detail = new Detail("Moscow", "987654321", "olejka@gmail.com");
+//            employee.setEmpDetail(detail);
+//            session.beginTransaction();
+//            session.save(employee);
+
+
+//            session.beginTransaction();
+//            Employee emp = session.get(Employee.class, 1);
+//            System.out.println(emp.getEmpDetail());
+
             session.beginTransaction();
-            Employee emp = session.get(Employee.class, 1);
-            System.out.println(emp.getEmpDetail());
+            Employee emp = session.get(Employee.class, 2);
+            session.delete(emp);
+
+
 
             session.getTransaction().commit();
             System.out.println("Done!");
