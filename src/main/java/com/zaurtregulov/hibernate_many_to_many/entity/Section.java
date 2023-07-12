@@ -1,5 +1,4 @@
 package com.zaurtregulov.hibernate_many_to_many.entity;
-//import jakarta.persistence.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
